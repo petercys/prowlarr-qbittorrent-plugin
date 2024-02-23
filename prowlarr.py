@@ -114,10 +114,10 @@ class prowlarr(object):
             else:
                 res['name'] = '%s [%s]' % (title, tracker)
 
-            if 'downloadUrl' in result:
-                res['link'] = str(result.get('downloadUrl'))
-            elif 'magnetUrl' in result:
+            if 'magnetUrl' in result:
                 res['link'] = str(result.get('magnetUrl'))
+            elif 'downloadUrl' in result:
+                res['link'] = str(result.get('downloadUrl'))
             else:
                 res['link'] = "no link to downlaod"
 

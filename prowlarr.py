@@ -1,4 +1,4 @@
-# VERSION: 1.0
+# VERSION: 1.1
 # prowlarr.py
 # AUTHORS: swannie-eire (https://github.com/swannie-eire)
 # CONTRIBUTORS:
@@ -116,7 +116,7 @@ class prowlarr(object):
 
             tracker_lower = tracker.lower()
             if 'u3c3' in tracker_lower or 'u9a9' in tracker_lower:
-                if what not in title:
+                if what.strip() not in title.strip():
                     continue
 
             if 'magnetUrl' in result:

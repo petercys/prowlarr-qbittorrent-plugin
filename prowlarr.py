@@ -114,6 +114,11 @@ class prowlarr(object):
             else:
                 res['name'] = '%s [%s]' % (title, tracker)
 
+            tracker_lower = tracker.lower()
+            if 'u3c3' in tracker_lower or 'u9a9' in tracker_lower:
+                if what not in title:
+                    continue
+
             if 'magnetUrl' in result:
                 res['link'] = str(result.get('magnetUrl'))
             elif 'downloadUrl' in result:
